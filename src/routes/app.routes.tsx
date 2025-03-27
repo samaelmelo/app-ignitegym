@@ -26,7 +26,7 @@ type AppRoutes = {
 
 export type AppNavigatorRoutesProps = BottomTabNavigationProp<AppRoutes>;
 
-const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
+const BottomTab = createBottomTabNavigator<AppRoutes>();
 const Stack = createNativeStackNavigator();
 
 export function TabRoutes() {
@@ -34,7 +34,7 @@ export function TabRoutes() {
    const iconSize = tokens.space['6'];
 
    return (
-      <Navigator
+      <BottomTab.Navigator
          screenOptions={{
             headerShown: false, // remove o header de todas as telas
             tabBarShowLabel: false, // remove a label de todos os botoes de navegacão
@@ -50,7 +50,7 @@ export function TabRoutes() {
             },
          }}
       >
-         <Screen
+         <BottomTab.Screen
             name="home"
             component={Home}
             options={{
@@ -60,7 +60,7 @@ export function TabRoutes() {
                ),
             }}
          />
-         <Screen
+         <BottomTab.Screen
             name="history"
             component={History}
             options={{
@@ -70,7 +70,7 @@ export function TabRoutes() {
                ),
             }}
          />
-         <Screen
+         <BottomTab.Screen
             name="profile"
             component={Profile}
             options={{
@@ -80,14 +80,8 @@ export function TabRoutes() {
                ),
             }}
          />
-         {/* <Screen
-            name="exercise"
-            component={Exercise}            
-            options={{
-               tabBarButton: () =>  null,
-            }} //remover icone do botao, mas manter a rota
-         /> */}
-      </Navigator>
+
+      </BottomTab.Navigator>
    );
 }
 

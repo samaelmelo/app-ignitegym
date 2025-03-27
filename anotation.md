@@ -45,3 +45,9 @@ npm install @react-navigation/native
 ````
 npm install @react-navigation/bottom-tabs
 ````
+
+## Instalação da lib de icones 
+
+```
+npm install lucide-react-native
+```
