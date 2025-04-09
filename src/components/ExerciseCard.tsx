@@ -1,7 +1,13 @@
-import { Heading, HStack, Image, VStack , Text, Icon} from '@gluestack-ui/themed';
-import { TouchableOpacity, TouchableOpacityProps,  } from 'react-native';
+import {
+   Heading,
+   HStack,
+   Image,
+   VStack,
+   Text,
+   Icon,
+} from '@gluestack-ui/themed';
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import { ChevronRight } from 'lucide-react-native';
-
 
 type Props = TouchableOpacityProps;
 
@@ -29,11 +35,15 @@ export function ExerciseCard({ ...rest }: Props) {
             />
 
             <VStack flex={1}>
-              <Heading fontSize="$lg" color="$white" fontFamily="$heading">Puxada frontal</Heading>
-              <Text fontSize="$sm" color="$gray200" mt="$1" numberOfLines={2}>3 séries x 12 repetições</Text>
+               <Heading fontSize="$lg" color="$white" fontFamily="$heading">
+                  Puxada frontal
+               </Heading>
+               <Text fontSize="$sm" color="$gray200" mt="$1" numberOfLines={2}>
+                  3 séries x 12 repetições
+               </Text>
             </VStack>
 
-            <Icon as={ChevronRight} color="$gray300"  />
+            <Icon as={ChevronRight} color="$gray300" />
          </HStack>
       </TouchableOpacity>
    );

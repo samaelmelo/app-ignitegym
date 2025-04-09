@@ -42,28 +42,40 @@ npm install @react-navigation/native
 
 ## Instalação da navegação com bottom tab navigation da mesma lig react navigation
 
-````
+```
 npm install @react-navigation/bottom-tabs
-````
+```
 
-## Instalação da lib de icones 
+## Instalação da lib de icones
 
 ```
 npm install lucide-react-native
 ```
 
-## Instalação da lib expo image picker 
+## Instalação da lib expo image picker
 
 ```
 npx expo install expo-image-picker
 ```
 
- permite acessar o album do usuário no dispositivo
+permite acessar o album do usuário no dispositivo
 
- ## Instalação do fileSystem  
+## Instalação do fileSystem
 
 ```
 npx expo install expo-file-system
 ```
 
- permite pegar mais informações do sistema
+permite pegar mais informações do sistema
+
+## Instalação do react hook form
+
+```
+npm install react-hook-form
+```
+
+## Instalação do yup
+
+```
+ npm install @hookform/resolvers  yup
+```
