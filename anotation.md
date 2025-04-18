@@ -79,3 +79,9 @@ npm install react-hook-form
 ```
  npm install @hookform/resolvers  yup
 ```
+
+## Instalacao do axios
+
+```
+npm install axios
+```
