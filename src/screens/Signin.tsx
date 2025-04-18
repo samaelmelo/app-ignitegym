@@ -6,6 +6,7 @@ import {
    Heading,
    ScrollView,
    onChange,
+   useToast,
 } from '@gluestack-ui/themed';
 
 import BackgroundImg from '@assets/background.png';
@@ -14,12 +15,16 @@ import Logo from '@assets/logo.svg';
 import { Input } from '@components/Input';
 import { Button } from '@components/Button';
 
+import { useAuth } from '@hooks/useAuth';
+
 import { AuthNavigatorRoutesProps } from '@routes/auth.routes';
 import { useNavigation } from '@react-navigation/native';
 
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yop from 'yup';
+import { AppError } from '@utils/AppError';
+import { ToastMenssage } from '@components/ToastMenseger';
 
 type SignInFormData = {
    email: string;
@@ -34,6 +39,10 @@ const signInSchema = yop.object({
 export function SignIn() {
    const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
+   const { signIn } = useAuth();
+
+   const toast = useToast();
+
    const {
       control,
       handleSubmit,
@@ -46,9 +55,29 @@ export function SignIn() {
       navigation.navigate('signUp');
    }
 
-   const handleSignIn = ({ email, password }: SignInFormData) => {
-      console.log({ email, password });
-   };
+   async function handleSignIn({ email, password }: SignInFormData) {
+      try {
+         await signIn(email, password);
+      } catch (error) {
+         const isAppError = error instanceof AppError;
+
+         const title = isAppError
+            ? error.message
+            : 'Não foi possível entrar. Tente novamente mais tarde.';
+
+         toast.show({
+            placement: 'top',
+            render: ({ id }) => (
+               <ToastMenssage
+                  id={id}
+                  action="error"
+                  onClose={() => toast.close(id)}
+                  title={title}
+               />
+            ),
+         });
+      }
+   }
 
    return (
       <ScrollView

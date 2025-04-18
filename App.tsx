@@ -4,6 +4,9 @@ import {
    Roboto_700Bold,
    Roboto_400Regular,
 } from '@expo-google-fonts/roboto';
+
+import { AuthContext, AuthContextProvider } from '@contexts/AuthContext';
+
 import { StatusBar } from 'expo-status-bar';
 import { GluestackUIProvider, Text, Center } from '@gluestack-ui/themed';
 import { config } from './config/gluestack-ui.config';
@@ -17,8 +20,9 @@ export default function App() {
    return (
       <GluestackUIProvider config={config}>
          <StatusBar style="light" backgroundColor="transparent" translucent />
-
-         {fontsLoaded ? <Routes /> : <Loading />}
+         <AuthContextProvider>
+            {fontsLoaded ? <Routes /> : <Loading />}
+         </AuthContextProvider>
       </GluestackUIProvider>
    );
 }
