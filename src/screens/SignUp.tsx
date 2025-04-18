@@ -23,6 +23,8 @@ import { useNavigation } from '@react-navigation/native';
 import { Alert } from 'react-native';
 import { AppError } from '@utils/AppError';
 import { ToastMenssage } from '@components/ToastMenseger';
+import { useState } from 'react';
+import { useAuth } from '@hooks/useAuth';
 
 type FormDataProps = {
    name: string;
@@ -45,6 +47,8 @@ const signUpSchema = yup.object({
 });
 
 export function SignUp() {
+   const [isloading, setIsloading] = useState(false);
+   const { signIn } = useAuth();
    const {
       control,
       handleSubmit,
@@ -68,8 +72,10 @@ export function SignUp() {
       password_confirm,
    }: FormDataProps) => {
       try {
-         const response = await api.post('/users', { name, email, password });
-         console.log(response.data);
+         setIsloading(true);
+         await api.post('/users', { name, email, password });
+
+         await signIn(email, password);
       } catch (error) {
          const isAppError = error instanceof AppError;
 
@@ -88,6 +94,8 @@ export function SignUp() {
                />
             ),
          });
+         setIsloading(false);
+
       }
    };
 
@@ -178,6 +186,7 @@ export function SignUp() {
                   <Button
                      title="Criar e acessar"
                      onPress={handleSubmit(handleSignUp)}
+                     isLoading={isloading}
                   />
                </Center>
 

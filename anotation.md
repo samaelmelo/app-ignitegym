@@ -85,3 +85,10 @@ npm install react-hook-form
 ```
 npm install axios
 ```
+
+## Instalar o async storage - lib que fornece uma API de armazenamento de chave-valor assíncrona, não criptografada e persistente.
+
+```
+npx expo install @react-native-async-storage/async-storage
+```
+

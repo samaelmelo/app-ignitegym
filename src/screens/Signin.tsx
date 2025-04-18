@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
    VStack,
    Image,
@@ -37,6 +38,8 @@ const signInSchema = yop.object({
 });
 
 export function SignIn() {
+   const [isLoading, setIsLoading] = useState(false);
+
    const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
    const { signIn } = useAuth();
@@ -57,6 +60,7 @@ export function SignIn() {
 
    async function handleSignIn({ email, password }: SignInFormData) {
       try {
+         setIsLoading(true);
          await signIn(email, password);
       } catch (error) {
          const isAppError = error instanceof AppError;
@@ -76,6 +80,8 @@ export function SignIn() {
                />
             ),
          });
+
+         setIsLoading(false);
       }
    }
 
@@ -140,6 +146,7 @@ export function SignIn() {
                   <Button
                      title="Acessar"
                      onPress={handleSubmit(handleSignIn)}
+                     isLoading={isLoading}
                   />
                </Center>
 
