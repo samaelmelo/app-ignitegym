@@ -4,13 +4,13 @@ Aplicativo mobile desenvolvido em React Native durante o curso **Ignite** da **R
 
 ## 📸 Screenshots
  <div style="display: flex, flex-wrap: wrap, justify-content: center">
-    <img src="src/assets/Screenshot 2025-05-06 at 22.25.38.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.25.50.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.26.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.33.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.44.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.51.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.38.22.png" alt="Foto do app" width="" height="500px">
+    <img src="src/assets/Screenshot 2025-05-06 at 22.25.38.png" alt="Foto do app" width="265px" height="450px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.25.50.png" alt="Foto do app" width="265px" height="450px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.26.png" alt="Foto do app" width="265px" height="450px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.33.png" alt="Foto do app" width="265px" height="450px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.44.png" alt="Foto do app" width="265px" height="450px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.51.png" alt="Foto do app" width="265px" height="450px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.38.22.png" alt="Foto do app" width="265px" height="450px">
    </div>
 
 ## 📱 Sobre o app
