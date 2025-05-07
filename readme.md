@@ -2,6 +2,17 @@
 
 Aplicativo mobile desenvolvido em React Native durante o curso **Ignite** da **Rocketseat**, com foco em consolidar os conceitos de programação orientada a componentes, navegação, consumo de API e boas práticas com TypeScript.
 
+## 📸 Screenshots
+ <div style="display: flex, flex-wrap: wrap, justify-content: center">
+    <img src="src/assets/Screenshot 2025-05-06 at 22.25.38.png" alt="Foto do app" width="" height="500px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.25.50.png" alt="Foto do app" width="" height="500px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.26.png" alt="Foto do app" width="" height="500px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.33.png" alt="Foto do app" width="" height="500px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.44.png" alt="Foto do app" width="" height="500px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.26.51.png" alt="Foto do app" width="" height="500px">
+  <img src="src/assets/Screenshot 2025-05-06 at 22.38.22.png" alt="Foto do app" width="" height="500px">
+   </div>
+
 ## 📱 Sobre o app
 
 O **Ignite Gym** é uma aplicação para academias, onde usuários podem:
@@ -19,64 +30,39 @@ O **Ignite Gym** é uma aplicação para academias, onde usuários podem:
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [NativeBase](https://nativebase.io/)
 - [React Navigation](https://reactnavigation.org/)
 - [Axios](https://axios-http.com/)
-- [React Hook Form](https://react-hook-form.com/)
-- [Zod](https://zod.dev/)
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
-
-## 📸 Screenshots
-  <img src="src/assets/Screenshot 2025-05-06 at 22.25.38.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.25.50.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.26.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.33.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.44.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.26.51.png" alt="Foto do app" width="" height="500px">
-  <img src="src/assets/Screenshot 2025-05-06 at 22.38.22.png" alt="Foto do app" width="" height="500px">
+- [React Hook Form](https://react-hook-form.com/)
+- [expo-image-picker](https://docs.expo.dev/versions/latest/sdk/imagepicker/)
+- [Gluestack UI](https://gluestack.io/)
 
 ## 🧠 Desafios e aprendizados
-Durante o desenvolvimento do Ignite Gym, enfrentei e superei diversos desafios técnicos que contribuíram fortemente para minha evolução como desenvolvedor mobile:
+Durante o desenvolvimento do projeto Ignite Gym, enfrentei diversos desafios que me proporcionaram aprendizados práticos essenciais no desenvolvimento mobile com React Native:
 
-### 🔐 1. Autenticação com JWT
-Integração com API para login e registro de usuário.
+### 🔐 Autenticaç com JWT
+Implementei fluxo completo de autenticação com login, cadastro e logout, utilizando JWT e interceptadores do Axios para injetar automaticamente o token em requisições autenticadas. Também realizei o armazenamento seguro da sessão com AsyncStorage, mantendo o usuário logado mesmo após fechar o app.
 
-Armazenamento seguro do token usando AsyncStorage.
+### 🌐 Gerenciamento de sessã com Context API
+Criei um contexto de autenticação (AuthContext) para compartilhar o estado global do usuário entre telas públicas e privadas, garantindo acessos controlados e consistência de dados durante toda a navegação.
 
-Requisições autenticadas com interceptadores do Axios.
+### 🚦 Controle de rotas públicas e privadas
+Implementei uma lógica de rotas que reireciona dinamicamente o usuário com base na autenticação, utilizando React Navigation. Isso inclui o uso de Splash Screen para verificar a sessão antes de renderizar o app.
 
-### 📦 2. Gerenciamento de estado com Context API
-Criação de um AuthContext para manter o usuário logado.
+### 🧭 Navegação entre telas
+Utilizei *Stack Navigator e Bottom Tabs para estruturar a navegação da aplicação, com passagem de parâmetros entre telas e integração com o histórico de navegação de forma fluida e escalável.
 
-Compartilhamento de dados de sessão entre múltiplas telas.
+### 🧰 Formulários com validação
+Implementei formulários com React Hook Form em conjunto com Zod, criando validações claras e mensagens de erro intuitivas para melhorar a experiência do usuário no cadastro e login.
 
-### 🚦 3. Controle de rotas privadas e públicas
-Implementação de lógica de redirecionamento entre telas públicas (Login/Cadastro) e privadas (Home/Exercícios).
+### 🖼️ Upload e manipulação de imagens
+Utilizei o expo-image-picker para permitir que o usuário selecione ou capture uma imagem da galeria ou câmera. Também implementei o envio dessa imagem como avatar para a API com preview local, lidando com permissões e compressão imagem.
 
-Splash screen personalizada enquanto verifica autenticação.
+### 💠 Interface moderna e responsiva
+Utilizei a biblioteca Gluestack UI, baseada em design system, para compor a interface do ap com foco em acessibilidade, responsividade e manutenibilidade. Trabalhei com temas, componentes reutilizáveis e layouts flexíveis.
 
-### 🧭 4. Navegação entre telas
-Uso de React Navigation (Stack e Bottom Tabs).
-
-Passagem de parâmetros entre telas e navegação com histórico.
-
-### 🧰 5. Formulários com validação
-Utilização de React Hook Form + Zod para validação de campos (e-mail, senha, etc).
-
-Mensagens de erro amigáveis e adaptadas.
-
-### 🗂️ 6. Organização de componentes
-Separação clara entre componentes reutilizáveis, hooks personalizados, rotas, serviços, e armazenamento local.
-
-Código limpo e modular, seguindo boas práticas de arquitetura.
-
-### 💾 7. Persistência local
-Armazenamento e recuperação de dados com AsyncStorage para manter login e histórico mesmo ao fechar o app.
-
-### 📱 8. Design responsivo com NativeBase
-Criação de uma UI moderna e adaptada para diferentes tamanhos de tela.
-
-Uso de tokens de tema para cores, fontes e espaçamentos.
+### 📂 Organização do projeto
+Mantive uma estrutura de pastas modular e limpa, separando componentes, hooks, rotas, serviços, utilitários e contexto, seguindo boas práticas de arquitetura para aplicações escaláveis.
 
 ## 👨‍💻 Desenvolvedor
 Feito com 💙 por Samael Melo
