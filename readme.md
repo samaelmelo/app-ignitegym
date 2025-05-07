@@ -64,5 +64,37 @@ Utilizei a biblioteca Gluestack UI, baseada em design system, para compor a inte
 ### 📂 Organização do projeto
 Mantive uma estrutura de pastas modular e limpa, separando componentes, hooks, rotas, serviços, utilitários e contexto, seguindo boas práticas de arquitetura para aplicações escaláveis.
 
+## 📂 Estrutura do Projeto
+
+<img src="src/assets/Screenshot 2025-05-06 at 23.34.46.png">
+
+## 🚀 Como rodar o projeto
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/samaelmelo/api-ignitegym
+
+
+2. Instale as dependências
+
+   ```  
+    npm install
+
+    ou
+
+    yarn
+
+3. Rode o projeto
+  ```
+    npx expo start 
+  ```
+
+É necessário ter o Expo CLI instalado e um emulador Android/iOS ou o app Expo Go no celular.
+
+
+
+
 ## 👨‍💻 Desenvolvedor
 Feito com 💙 por Samael Melo
+
+
